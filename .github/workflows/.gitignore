@@ -1,0 +1,15 @@
+# Godot 4
+.godot/
+/android/
+
+# Сборки
+/build/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Система
+.DS_Store
+Thumbs.db
+__pycache__/
