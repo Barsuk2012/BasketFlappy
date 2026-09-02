@@ -53,6 +53,10 @@ jobs:
           mkdir -p $HOME/.config/godot
           printf '[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/debug_keystore = "%s/.android/debug.keystore"\nexport/android/debug_keystore_user = "androiddebugkey"\nexport/android/debug_keystore_pass = "android"\n' "$ANDROID_HOME" "$HOME" > $HOME/.config/godot/editor_settings-4.tres
 
+      - name: Import resources
+        run: |
+          ./Godot_v4.3-stable_linux.x86_64 --headless --import
+
       - name: Export APK
         run: |
           mkdir -p build
